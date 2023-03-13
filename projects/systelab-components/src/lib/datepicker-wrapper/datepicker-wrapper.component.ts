@@ -1,16 +1,16 @@
 import { AfterViewInit, Component, DoCheck, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
 import { addDays } from 'date-fns';
-import { PrimeNGConfig } from 'primeng/api';
-import { Calendar } from 'primeng/calendar';
+import { PrimeNGConfig } from '../p-calendar/api/primengconfig';
+import { PCalendarComponent } from '../p-calendar/p-calendar.component';
 import { I18nService } from 'systelab-translate';
-import { DataTransformerService } from './date-transformer.service';
+import { WrapperDataTransformerService } from './wrapper-date-transformer.service';
 
 @Component({
-	selector:    'systelab-datepicker',
-	templateUrl: 'datepicker.component.html',
-	providers:   [DataTransformerService]
+	selector:    'systelab-wrapper-datepicker',
+	templateUrl: 'datepicker-wrapper.component.html',
+	providers:   [WrapperDataTransformerService]
 })
-export class Datepicker implements OnInit, AfterViewInit, DoCheck, OnDestroy {
+export class WrapperDatepicker implements OnInit, AfterViewInit, DoCheck, OnDestroy {
 
 	@Input() public disabled = false;
 	@Input() public error = false;
@@ -54,7 +54,7 @@ export class Datepicker implements OnInit, AfterViewInit, DoCheck, OnDestroy {
 
 	@Output() public currentDateChange = new EventEmitter<Date>();
 
-	@ViewChild('calendar', {static: true}) public currentCalendar: Calendar;
+	@ViewChild('calendar', {static: true}) public currentCalendar: PCalendarComponent;
 
 	public inputChanged = false;
 	protected _currentDate: Date;
@@ -74,7 +74,7 @@ export class Datepicker implements OnInit, AfterViewInit, DoCheck, OnDestroy {
 
 	private headerElement: any = document.getElementById(this.datepickerId);
 
-	constructor(protected myRenderer: Renderer2, protected i18nService: I18nService, protected dataTransformerService: DataTransformerService, protected config: PrimeNGConfig) {
+	constructor(protected myRenderer: Renderer2, protected i18nService: I18nService, protected dataTransformerService: WrapperDataTransformerService, protected config: PrimeNGConfig) {
 		this.addListeners();
 		// TODO: To get the language and modify the values.
 	}
@@ -120,7 +120,7 @@ export class Datepicker implements OnInit, AfterViewInit, DoCheck, OnDestroy {
 		if (this.headerElement !== document.getElementById(this.datepickerId)) {
 			this.headerElement = document.getElementById(this.datepickerId);
 			if (this.headerElement) {
-				console.log("datepicker")
+				console.log("datepickerWrapper")
 				console.log(this.headerElement.parentElement.parentElement)
 				this.repositionateCalendar(new ElementRef(this.headerElement.parentElement.parentElement));
 			}

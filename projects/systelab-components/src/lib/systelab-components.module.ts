@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SliderComponent } from './slider/slider.component';
 import { SwitchComponent } from './switch/switch.component';
 import { FormsModule } from '@angular/forms';
@@ -99,12 +101,17 @@ import { DraggableDirective } from './directives/draggable.directive';
 import { ResizableDirective } from './directives/resizable.directive';
 import {ImageViewerComponent} from './image-viewer/image-viewer.component';
 import { NumpadDecimalNumericDirective } from './directives/numpad-decimal-numeric.directive';
+import { PCalendarComponent } from './p-calendar/p-calendar.component';
+import { WrapperDatepicker } from './datepicker-wrapper/datepicker-wrapper.component';
+import { DatepickerWrapperTimeComponent } from './datepicker-wrapper/wrapper-datepicker-time.component';
+import { SharedDatePickerModule } from './p-calendar/api/shared';
 
 @NgModule({
 	imports:      [
 		CommonModule,
 		FormsModule,
 		SharedModule,
+		SharedDatePickerModule,
 		CalendarModule,
 		TreeModule,
 		AutoCompleteModule,
@@ -114,7 +121,9 @@ import { NumpadDecimalNumericDirective } from './directives/numpad-decimal-numer
 		AngularSplitModule,
 		SystelabTranslateModule,
 		AgGridModule,
-		CdkTreeModule
+		CdkTreeModule,
+		BrowserModule,
+		BrowserAnimationsModule
 	],
 	declarations: [
 		SliderComponent,
@@ -200,7 +209,10 @@ import { NumpadDecimalNumericDirective } from './directives/numpad-decimal-numer
 		DraggableDirective,
 		ResizableDirective,
 		ImageViewerComponent,
-		NumpadDecimalNumericDirective
+		NumpadDecimalNumericDirective,
+		PCalendarComponent,
+		WrapperDatepicker,
+		DatepickerWrapperTimeComponent
 	],
 	exports:      [
 		SliderComponent,
@@ -285,7 +297,10 @@ import { NumpadDecimalNumericDirective } from './directives/numpad-decimal-numer
 		DraggableDirective,
 		ResizableDirective,
 		ImageViewerComponent,
-		NumpadDecimalNumericDirective
+		NumpadDecimalNumericDirective,
+		PCalendarComponent,
+		WrapperDatepicker,
+		DatepickerWrapperTimeComponent
 	],
 	providers:    [
 		StylesUtilService,

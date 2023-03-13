@@ -12,34 +12,34 @@
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Datepicker Time</label>
         <div class="col-md-9">
-            <systelab-date-time
-                    [(currentDate)]="myDate"></systelab-date-time>
+            <systelab-wrapper-date-time
+                    [(currentDate)]="myDate"></systelab-wrapper-date-time>
         </div>
     </div>
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Datepicker Time (Time integrated)</label>
         <div class="col-md-9">
-            <systelab-date-time
+            <systelab-wrapper-date-time
                     [(currentDate)]="myNewDate"
                     [withIntegratedTime]="true"
-            ></systelab-date-time>
+            ></systelab-wrapper-date-time>
         </div>
     </div>
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Datepicker Time (Disabled)</label>
         <div class="col-md-9">
-            <systelab-date-time [disabled]="true"
-                    [(currentDate)]="myDate"></systelab-date-time>
+            <systelab-wrapper-date-time [disabled]="true"
+                    [(currentDate)]="myDate"></systelab-wrapper-date-time>
         </div>
     </div>
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Datepicker Time reseting time</label>
         <div class="col-md-9">
             <div class ="row ml-auto">
-                <systelab-date-time
+                <systelab-wrapper-date-time
                         [resetTimeWhenChangingCurrentDate]="true"
                         [(currentDate)]="myDateWithReset">
-                </systelab-date-time>
+                </systelab-wrapper-date-time>
                 <systelab-button type="primary" [size]="'small'" class="ml-2" (action)="resetDateAndTime()">Reset</systelab-button>
             </div>
         </div>
@@ -47,57 +47,57 @@
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Datepicker Time without calendar</label>
         <div class="col-md-9">
-            <systelab-date-time
+            <systelab-wrapper-date-time
                     [showCalendar]="false"
-                    [(currentDate)]="myDate"></systelab-date-time>
+                    [(currentDate)]="myDate"></systelab-wrapper-date-time>
         </div>
     </div>
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Datepicker Time without calendar (time only mode)</label>
         <div class="col-md-9">
-            <systelab-date-time
+            <systelab-wrapper-date-time
                     [showCalendar]="false"
                     [(currentDate)]="myNewDate"
                     [withIntegratedTime]="true"
                     [onlyTime]="true"
-            ></systelab-date-time>
+            ></systelab-wrapper-date-time>
         </div>
     </div>
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Date error always</label>
         <div class="col-md-4">
-            <systelab-datepicker
+            <systelab-wrapper-datepicker
                     [error]="true"
                     [(currentDate)]="myDate"
-                    [showTodayButton]="true"></systelab-datepicker>
+                    [showTodayButton]="true"></systelab-wrapper-datepicker>
 
         </div>
     </div>
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Date error (red is past)</label>
         <div class="col-md-4">
-            <systelab-datepicker
+            <systelab-wrapper-datepicker
                     [(currentDate)]="myDate"
                     [markPreviousAfterDate]="true"
-                    [showTodayButton]="true"></systelab-datepicker>
+                    [showTodayButton]="true"></systelab-wrapper-datepicker>
         </div>
     </div>
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Date required bottom</label>
         <div class="col-md-4">
-            <systelab-datepicker
+            <systelab-wrapper-datepicker
                     [required]="true"
                     [(currentDate)]="myDate"
-                    [showTodayButton]="true"></systelab-datepicker>
+                    [showTodayButton]="true"></systelab-wrapper-datepicker>
         </div>
     </div>
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Date with relative date yesterday</label>
         <div class="col-md-4">
-            <systelab-datepicker
+            <systelab-wrapper-datepicker
                     [fromDateForRelativeDates]="yesterdayDate"
                     [(currentDate)]="myDate"
-                    [showTodayButton]="true"></systelab-datepicker>
+                    [showTodayButton]="true"></systelab-wrapper-datepicker>
         </div>
     </div>
     <div class="row mt-1">
@@ -119,20 +119,20 @@
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Do not display dates in other months in the calendar</label>
         <div class="col-md-4">
-            <systelab-datepicker
+            <systelab-wrapper-datepicker
                     [showOtherMonths]="false"
                     [(currentDate)]="myNewDate"
-            ></systelab-datepicker>
+            ></systelab-wrapper-datepicker>
         </div>
     </div>
     <div class="row mt-1">
         <label class="col-md-3 col-form-label" for="form-h-s">Show dates in other months as selectable in the calendar</label>
         <div class="col-md-4">
-            <systelab-datepicker
+            <systelab-wrapper-datepicker
                     [showOtherMonths]="true"
                     [selectOtherMonths]="true"
                     [(currentDate)]="myNewDate"
-            ></systelab-datepicker>
+            ></systelab-wrapper-datepicker>
         </div>
     </div>
 </div>
