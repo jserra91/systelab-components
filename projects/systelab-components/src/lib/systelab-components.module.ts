@@ -102,12 +102,16 @@ import { ResizableDirective } from './directives/resizable.directive';
 import {ImageViewerComponent} from './image-viewer/image-viewer.component';
 import { NumpadDecimalNumericDirective } from './directives/numpad-decimal-numeric.directive';
 import { PCalendarComponent } from './p-calendar/p-calendar.component';
+import { WrapperDatepicker } from './datepicker-wrapper/datepicker-wrapper.component';
+import { DatepickerWrapperTimeComponent } from './datepicker-wrapper/wrapper-datepicker-time.component';
+import { SharedDatePickerModule } from './p-calendar/api/shared';
 
 @NgModule({
 	imports:      [
 		CommonModule,
 		FormsModule,
 		SharedModule,
+		SharedDatePickerModule,
 		CalendarModule,
 		TreeModule,
 		AutoCompleteModule,
@@ -206,7 +210,9 @@ import { PCalendarComponent } from './p-calendar/p-calendar.component';
 		ResizableDirective,
 		ImageViewerComponent,
 		NumpadDecimalNumericDirective,
-		PCalendarComponent
+		PCalendarComponent,
+		WrapperDatepicker,
+		DatepickerWrapperTimeComponent
 	],
 	exports:      [
 		SliderComponent,
@@ -292,7 +298,9 @@ import { PCalendarComponent } from './p-calendar/p-calendar.component';
 		ResizableDirective,
 		ImageViewerComponent,
 		NumpadDecimalNumericDirective,
-		PCalendarComponent
+		PCalendarComponent,
+		WrapperDatepicker,
+		DatepickerWrapperTimeComponent
 	],
 	providers:    [
 		StylesUtilService,

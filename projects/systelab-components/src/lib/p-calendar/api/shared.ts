@@ -35,4 +35,4 @@ export class PrimeTemplate {
     exports: [Header, Footer, PrimeTemplate],
     declarations: [Header, Footer, PrimeTemplate]
 })
-export class SharedModule {}
+export class SharedDatePickerModule {}

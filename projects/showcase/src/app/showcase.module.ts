@@ -100,6 +100,7 @@ import { ShowcaseProgressBarWithTextDialog } from './components/progress-bars/pr
 import { ShowcaseImageViewerComponent } from './components/image-viewer/showcase-image-viewer.component';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { ShowcasePDatepickerComponent } from './components/datepicker-copy/showcase-datepicker.component';
+import { ShowcaseWrapperDatepickerComponent } from './components/wrapper-datepicker/showcase-wrapper-datepicker.component';
 
 @NgModule({
 	imports:      [
@@ -207,7 +208,8 @@ import { ShowcasePDatepickerComponent } from './components/datepicker-copy/showc
 		ShowcaseInteractiveComponent,
 		ShowcaseProgressBarWithTextDialog,
 		ShowcaseImageViewerComponent,
-		ShowcasePDatepickerComponent
+		ShowcasePDatepickerComponent,
+		ShowcaseWrapperDatepickerComponent
 	],
 	bootstrap:    [ShowcaseComponent]
 })

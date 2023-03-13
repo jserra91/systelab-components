@@ -137,4 +137,6 @@ export * from './lib/forms/validators/phone-validator.directive';
 export * from './lib/forms/validators/url-validator.directive';
 
 export * from './lib/p-calendar/p-calendar.component';
+export * from './lib/datepicker-wrapper/datepicker-wrapper.component';
+export * from './lib/datepicker-wrapper/wrapper-datepicker-time.component';
 
